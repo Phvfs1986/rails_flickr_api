@@ -1,0 +1,9 @@
+<%= form_with url: :root, method: :get do |form| %>
+  <%= form.label :username, "User ID:" %>
+  <%= form.text_field :username %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<% @photos.each do |photo| %>
+  <%= link_to image_tag(photo.source_url) %>
+<% end %>
