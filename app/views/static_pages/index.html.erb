@@ -2,8 +2,13 @@
   <%= form.label :username, "User ID:" %>
   <%= form.text_field :username %>
   <%= form.submit "Search" %>
-<% end %>
+<% end %><br>
 
-<% @photos.each do |photo| %>
-  <%= link_to image_tag(photo.source_url) %>
+
+<% unless @photos.nil? %>
+  <h1><%= @response.username %>'s Photos</h1>
+  <h2><%= @photos.size %> photos total</h2>
+  <% @photos.each do |photo| %>
+    <%= image_tag "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg" %>
+  <% end %>
 <% end %>

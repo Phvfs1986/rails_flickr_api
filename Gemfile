@@ -49,9 +49,7 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 
 # flickr
-gem 'flickr-objects'
-
-gem 'faraday'
+gem 'flickr'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
